@@ -422,4 +422,4 @@ st.write("we are passionate about identifying fake news ")
 
 ## how we can add percentage of how much is real or fake
 ## How to add/ model the top words in the users input? is it actually necessary 
-## how to categorized fake into different sections 
+## how to categorized fake into different sections s
