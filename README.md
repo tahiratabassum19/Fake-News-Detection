@@ -1,2 +1,2 @@
-# Real_Fake_News_Detection
+# Fake News Detector
 Group project Data Science
