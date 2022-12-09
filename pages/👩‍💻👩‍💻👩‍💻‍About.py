@@ -47,10 +47,10 @@ def add_bg_from_url():
         </style>
         """, unsafe_allow_html=True)
 
-        st.markdown('<p class="Tah">I am Tahira Tabassum majoring in Computer Science at Queens College.I will be graduating this semester. I am enthusiastic about data science, technology , software development,Problem Solving, and related Fields. Fun Fact: I am scared of dogs</p>', unsafe_allow_html=True)
+        st.markdown('<p class="Tah">I am Tahira Tabassum majoring in Computer Science at Queens College.I will be graduating this semester. I am enthusiastic about data science, software development, Problem Solving, and Front End Design. Fun Fact: I am scared of dogs</p>', unsafe_allow_html=True)
         st.markdown(important_links)
     with col2:
-        st.image('https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png')
+        st.image('images/Jennifer.jpg')
         important_links1 = '''
         [github](https://github.com/jenalvarado),
         [LinkedIn](https://www.linkedin.com/in/jenyalvarado/),
@@ -71,11 +71,11 @@ def add_bg_from_url():
         </style>
         """, unsafe_allow_html=True)
 
-        st.markdown('<p class="Tah">I am Tahira Tabassum majoring in Computer Science at Queens College.I will be graduating this semester. I am enthusiastic about data science, technology , software development,Problem Solving, and related Fields. Fun Fact: I am scared of dogs</p>', unsafe_allow_html=True)
+        st.markdown('<p class="Tah">I am Jennifer Alvarado majoring in Creative Writing with a Minor in Computer Science at Brooklyn College.My interests are Writing,UI/UX Design, Hiking, and Cooking. I want to acquire a frontend position in designing web applications/mobile apps. Fun Fact:My right pinky can bend further back than my left one</p>', unsafe_allow_html=True)
         st.markdown(important_links1)
 
     with col3:
-        st.image('https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png')
+        st.image('images/Sharia.jpg')
         important_links2= '''
         [github]( https://github.com/shariahoque01),
         [LinkedIn](https://www.linkedin.com/in/sharia-hoque/),
@@ -93,6 +93,6 @@ def add_bg_from_url():
         </style>
         """, unsafe_allow_html=True)
 
-        st.markdown('<p class="Tah">I am Tahira Tabassum majoring in Computer Science at Queens College.I will be graduating this semester. I am enthusiastic about data science, technology , software development,Problem Solving, and related Fields. Fun Fact: I am scared of dogs</p>', unsafe_allow_html=True)
+        st.markdown('<p class="Tah">I am a senior undergradute student and majoring in Statistics and Quantitative Modeling at Baruch College Zicklin School of Business (CUNY). I have a keen interest in Data, technology and Business. Fun fact: I like Weightlifting and exploring Arts.</p>', unsafe_allow_html=True)
         st.markdown(important_links2)
 add_bg_from_url() 

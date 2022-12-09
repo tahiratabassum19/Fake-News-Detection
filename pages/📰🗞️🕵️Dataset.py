@@ -43,5 +43,16 @@ df=pd.read_csv('news_articles.csv')
 df=df.head()
 st.dataframe(data=df, width=None, height=None, use_container_width=False)
 
-#tryying visuals
 
+
+
+
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, y_pred)
+class_label = [0, 1]
+df_cm = pd.DataFrame(cm, index=class_label,columns=class_label)
+sns.heatmap(df_cm, annot=True, fmt='d')
+plt.title("Confusion Matrix")
+plt.xlabel("Predicted Label")
+plt.ylabel("True Label")
+plt.show()
