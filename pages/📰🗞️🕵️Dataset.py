@@ -42,6 +42,21 @@ add_bg_from_url()
 
 
 df=pd.read_csv('news_articles.csv')
-df=df[1:20]
+df=df[1:15]
 st.dataframe(data=df, width=None, height=None, use_container_width=False)
 
+# st.markdown("""
+#         <style>
+#         . {
+#         font-size:25px !important;
+#         text-align: left;
+#         font-family:Gothic;
+#         font-weight: bold;
+#         color: black
+
+#         }
+#             </style>
+#         """, unsafe_allow_html=True)
+# st.markdown('<p class="data">[Dataset](https://www.kaggle.com/datasets/ruchi798/source-based-news-classification)</p>', unsafe_allow_html=True)
+
+st.write("**[Dataset](https://www.kaggle.com/datasets/ruchi798/source-based-news-classification)**")
