@@ -8,4 +8,4 @@ plotly
 plotly-express
 scikit-learn
 seaborn
-pickle 
+
