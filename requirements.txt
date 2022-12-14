@@ -1,0 +1,10 @@
+matplotlib
+nltk
+altair
+pandas
+streamlit
+numpy
+plotly
+plotly-express
+scikit-learn
+pickle
