@@ -1,6 +1,8 @@
 import streamlit as st
 import pickle
 import string 
+import pandas as pd 
+import altair as alt
 from nltk.corpus import stopwords
 from nltk import word_tokenize
 import nltk 
@@ -29,6 +31,8 @@ def root_words(string):
 tfidf = pickle.load(open('models/vectorizer.pkl','rb'))
 rf_model = pickle.load(open('models/rf_model.pkl','rb'))
 mn_model=pickle.load(open('models/mn.pkl','rb'))
+adab_model=pickle.load(open('models/adab.pkl','rb'))
+
 
 
 def main():
@@ -82,35 +86,84 @@ def main():
     st.markdown('<p class="details">Did you know 85% Internet users are tricked by fake news? Are you confident in your ability to detect fake news? Check the authenticity of your news article here ↓ </p>', unsafe_allow_html=True)
 #st.write("Did you know 85% Internet users are tricked by fake news? Are you confident in your ability to detect fake news? Check the authenticity of your news article here ↓ ")
     text_input=st.text_input("Enter The Title Below", key = "<uniquevalueofsomesort>")
+       
 
-#st.markdown(f"",text_input)
     button = st.button("Predict")
-    # label = {'Fake':0, 'Real':1}
     if button:
-        st.text("Original Text:\n{}".format(text_input))
         transformed = root_words(text_input)
         vector_input = tfidf.transform([transformed]).toarray()
         result = mn_model.predict(vector_input)
-        # st.write(result)
-        if result[0] == 'Fake':
-            st.write("Fake!!!!")
-        else:
-            st.write("Real")
+       # result = rf_model.predict(vector_input)
+        #result = adab_model.predict(vector_input)
 
-            #st.balloons()
-        # final_result = get_key(result, label)
-        # st.success("News Categorized as:: {}".format(final_result))
-    # to_predict = [result]
-    # prediction = model.predict([to_predict])
-    # print(prediction_proba)
-    # value = prediction["Fake"]
-    # if value == "Fake":
-    #     pred_output = 'Fake'
-    #     pred_proba = prediction_proba[0][0].round(2) * 100
-    # else:
-    #     pred_output = 'Real'
-    #     pred_proba = prediction_proba[0][1].round(2) * 100
-    # output_text = '## Predicted a ' + '%' + '**%s chance of %s** \n\n based on the input of %s' % (pred_proba, pred_output, str(to_predict))
+
+        if result[0] == 'Fake':
+            st.markdown("""
+                <style>
+            .fake {
+            font-size:30px !important;
+            text-align: left;
+            font-family:Gothic;
+            font-weight: bold;
+            color: red
+
+            }
+             </style>
+            """, unsafe_allow_html=True)
+
+            st.markdown('<p class="fake">FAKE !!!!</p>', unsafe_allow_html=True)
+
+        else:
+            st.markdown("""
+                <style>
+            .real {
+            font-size:30px !important;
+            text-align: left;
+            font-family:Gothic;
+            font-weight: bold;
+            color: red
+
+            }
+             </style>
+            """, unsafe_allow_html=True)
+            st.markdown('<p class="real">Real!!!!</p>', unsafe_allow_html=True)
+            st.balloons()
+
+        st.markdown("""
+                <style>
+            .pred {
+            font-size:25px !important;
+            text-align: left;
+            font-family:Gothic;
+            font-weight: bold;
+            color: black
+
+            }
+             </style>
+            """, unsafe_allow_html=True)
+        st.markdown('<p class="pred">Prediction Probabilty</p>', unsafe_allow_html=True)
+
+        # result_prob= adab_model.predict_proba(vector_input)
+        # proba_df =pd.DataFrame(result_prob, columns = adab_model.classes_)
+        # proba_df_clean = proba_df.T.reset_index()
+        # proba_df_clean.columns = ["Result","probability"]
+        # fig =alt.Chart(proba_df_clean).mark_bar().encode(x='Result',y='probability',color='Result')
+        # st.altair_chart(fig,use_container_width=True)
+        
+        result_prob= mn_model.predict_proba(vector_input)
+        proba_df =pd.DataFrame(result_prob, columns = mn_model.classes_)
+        proba_df_clean = proba_df.T.reset_index()
+        proba_df_clean.columns = ["Result","probability"]
+        fig =alt.Chart(proba_df_clean).mark_bar().encode(x='Result',y='probability',color='Result')
+        st.altair_chart(fig,use_container_width=True)
+
+        # result_prob= rf_model.predict_proba(vector_input)
+        # proba_df =pd.DataFrame(result_prob, columns = rf_model.classes_)
+        # proba_df_clean = proba_df.T.reset_index()
+        # proba_df_clean.columns = ["Result","Probability"]
+        # fig =alt.Chart(proba_df_clean).mark_bar().encode(x='Result',y='Probability',color='Result')
+        # st.altair_chart(fig,use_container_width=True)
+    
 
 if __name__ == '__main__':
     main()
