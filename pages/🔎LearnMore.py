@@ -1,5 +1,15 @@
 import streamlit as st
-st.subheader("LearnMore")
+st.markdown("""
+<style>
+.learn {
+    font-size:50px !important;
+    text-align: center;
+    color: black
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown('<p class="learn">Learn More</p>', unsafe_allow_html=True)
 st.markdown("""
 <style>
 .About {
@@ -62,14 +72,9 @@ def add_bg_from_url():
         st.write('<a href="https://www.science.org/content/article/majority-americans-were-not-exposed-fake-news-2016-us-election-twitter-study-suggests">View Article</a>', unsafe_allow_html=True)
         st.write()
 
-
-
         
     with col2:
 
-    # display the link to that page.
-        # display another picture
-        #Bleach
         st.image('images/bleach1.jpg')
         st.markdown("""
         <style>
@@ -119,27 +124,8 @@ def add_bg_from_url():
         """, unsafe_allow_html=True)
 
         st.markdown('<p class="nasa">NASA Warns Planet X Is Headed Straight for Earth?</p>', unsafe_allow_html=True)
-        
-
         st.write('<a href="https://www.snopes.com/fact-check/nasa-warns-nibiru-is-headed-straight-for-earth/">View Article</a>', unsafe_allow_html=True)
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        
+       
         #Harambe
         st.image('images/Harambe.jpg',use_column_width='always')
         st.markdown("""
