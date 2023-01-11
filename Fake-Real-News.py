@@ -1,6 +1,8 @@
 import pandas as pd
 # NLTK is our Natural-Language-Took-Kit
 import nltk
+nltk.download('punkt')
+
 from nltk.corpus import stopwords
 from nltk import word_tokenize
 from nltk.stem import PorterStemmer
