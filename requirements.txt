@@ -8,5 +8,5 @@ plotly
 plotly-express
 scikit-learn
 seaborn
-markdown
-
+Markdown
+pickleshare
