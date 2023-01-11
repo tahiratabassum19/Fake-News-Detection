@@ -28,10 +28,10 @@ def root_words(string):
 
     return string 
 
-tfidf = pickle.load(open('models/vectorizer.pkl','rb'))
-rf_model = pickle.load(open('models/rf_model.pkl','rb'))
-mn_model=pickle.load(open('models/mn.pkl','rb'))
-#adab_model=pickle.load(open('models/adab.pkl','rb'))
+tfidf = pickle.load(open('Streamlit_rakuten/models/vectorizer.pkl','rb'))
+rf_model = pickle.load(open('Streamlit_rakuten/models/rf_model.pkl','rb'))
+mn_model=pickle.load(open('Streamlit_rakuten/models/mn.pkl','rb'))
+#adab_model=pickle.load(open('Streamlit_rakuten/models/adab.pkl','rb'))
 
 
 
