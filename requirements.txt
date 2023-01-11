@@ -7,4 +7,5 @@ numpy
 plotly
 plotly-express
 scikit-learn
-pickle
+seaborn
+
