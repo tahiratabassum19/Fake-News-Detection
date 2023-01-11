@@ -28,9 +28,9 @@ def root_words(string):
 
     return string 
 
-tfidf = pickle.load(open('models/vectorizer.pkl','rb'))
-rf_model = pickle.load(open('models/rf_model.pkl','rb'))
-mn_model=pickle.load(open('models/mn.pkl','rb'))
+tfidf = pickle.load(open('vectorizer.pkl','rb'))
+rf_model = pickle.load(open('rf_model.pkl','rb'))
+mn_model=pickle.load(open('mn.pkl','rb'))
 #adab_model=pickle.load(open('models/adab.pkl','rb'))
 
 

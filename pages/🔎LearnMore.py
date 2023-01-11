@@ -37,7 +37,7 @@ def add_bg_from_url():
    
     col1, col2, col3  = st.columns([1,1,1])
     with col1:
-        st.image('images/smoke.jpg',use_column_width='always')
+        st.image('smoke.jpg',use_column_width='always')
         st.markdown("""
         <style>
         .smoke {
@@ -53,7 +53,7 @@ def add_bg_from_url():
 
         st.markdown('<p class="smoke">Can We Trust Social Media as a News Source?</p>', unsafe_allow_html=True)
         st.write('<a href="https://blog.miappi.com/reliability-of-social-media-news-source">View Article</a>', unsafe_allow_html=True)
-        st.image('images/trump1.jpg',use_column_width='always')
+        st.image('trump1.jpg',use_column_width='always')
         st.write()
         st.markdown("""
         <style>
@@ -75,7 +75,7 @@ def add_bg_from_url():
         
     with col2:
 
-        st.image('images/bleach1.jpg')
+        st.image('bleach1.jpg')
         st.markdown("""
         <style>
         .bleach {
@@ -91,7 +91,7 @@ def add_bg_from_url():
         st.write('<a href="https://www.politico.com/news/2021/04/23/trump-bleach-one-year-484399">View Article.</a>', unsafe_allow_html=True)
         
 
-        st.image('images/candy.jpg',use_column_width='always')
+        st.image('candy.jpg',use_column_width='always')
         st.markdown("""
         <style>
         .candy {
@@ -109,7 +109,7 @@ def add_bg_from_url():
         st.write('<a href="https://bdc-tv.com/woman-murders-college-roommate-sending-many-candy-crush-requests/">View Article</a>', unsafe_allow_html=True)
 
     with col3:
-        st.image('images/nasa.jpg',use_column_width='always')
+        st.image('nasa.jpg',use_column_width='always')
         st.markdown("""
         <style>
         .nasa {
@@ -127,7 +127,7 @@ def add_bg_from_url():
         st.write('<a href="https://www.snopes.com/fact-check/nasa-warns-nibiru-is-headed-straight-for-earth/">View Article</a>', unsafe_allow_html=True)
        
         #Harambe
-        st.image('images/Harambe.jpg',use_column_width='always')
+        st.image('Harambe.jpg',use_column_width='always')
         st.markdown("""
         <style>
         .harambe {
