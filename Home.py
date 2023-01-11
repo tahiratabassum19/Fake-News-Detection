@@ -6,6 +6,7 @@ import altair as alt
 from nltk.corpus import stopwords
 from nltk import word_tokenize
 import nltk 
+nltk.download('punkt')
 from nltk.stem.porter import PorterStemmer
 ps=PorterStemmer()
 
